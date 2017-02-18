@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 #-*- coding: UTF-8 -*-
 __author__ = 'n30'
 
@@ -13,7 +15,7 @@ class Pyndianizer:
 
     def to_little_endian(self, hexstr):
         try:
-            hexnum = int(hexstr, 16)
+            hexnum = int(hexstr, 16) if type(hexstr) is str else hexstr
             if isinstance(hexnum, int) or isinstance(hexnum, long):
                 retstr = ""
                 b8arr8 = {}
@@ -36,7 +38,8 @@ class Pyndianizer:
 if __name__ == '__main__':
     if len(sys.argv) > 1:
         argv_1 = sys.argv[1]
-        print Pyndianizer().to_little_endian(argv_1)
+		pyndianizer = Pyndianizer()
+        print pyndianizer.to_little_endian(argv_1)
     else:
         print
         print "==== PYNDIANIZER BY N30M1ND ===="
