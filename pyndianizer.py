@@ -38,7 +38,7 @@ class Pyndianizer:
 if __name__ == '__main__':
     if len(sys.argv) > 1:
         argv_1 = sys.argv[1]
-		pyndianizer = Pyndianizer()
+        pyndianizer = Pyndianizer()
         print pyndianizer.to_little_endian(argv_1)
     else:
         print
