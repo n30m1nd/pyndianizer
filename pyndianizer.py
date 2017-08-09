@@ -20,7 +20,7 @@ class Pyndianizer:
                 retstr = ""
                 b8arr8 = {}
                 if True:
-                    b8arr8 = struct.pack('<I',hexnum)
+                    b8arr8 = struct.pack('<q',hexnum)
                 #else: # For compatibility with 64bit when I get my head around it
                 #    b8arr8 = struct.pack('<d',hexnum)
                 strindi = binascii.hexlify(b8arr8)
