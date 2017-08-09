@@ -5,4 +5,4 @@ Tool that turns hex numbers to little endian; to help writing payloads for explo
 `pyndianizer.py 0xbebafecabebafeca` ==outputs==> `\xca\xfe\xba\xbe\xca\xfe\xba\xbe`
 
 ### where to:
-`echo "{shellcode}$(python pyndianizer.py 0xbaaddeadfabadaca)" | bufferoverflowbinary`
+`echo "${shellcode}$(python pyndianizer.py 0xbaaddeadfabadaca)" | bufferoverflowbinary`
