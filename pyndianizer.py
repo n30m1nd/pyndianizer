@@ -19,10 +19,7 @@ class Pyndianizer:
             if isinstance(hexnum, int) or isinstance(hexnum, long):
                 retstr = ""
                 b8arr8 = {}
-                if True:
-                    b8arr8 = struct.pack('<q',hexnum)
-                #else: # For compatibility with 64bit when I get my head around it
-                #    b8arr8 = struct.pack('<d',hexnum)
+	    	b8arr8 = struct.pack('<q',hexnum)
                 strindi = binascii.hexlify(b8arr8)
                 couples = [strindi[i:i + 2] for i in range(0, len(strindi), 2)]
                 for pair in couples:
